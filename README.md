@@ -1,13 +1,13 @@
 # Dynamic Character Controller
-
-This is based on my Three + Rust boilerplate using Babel, PostCSS, Sass and Gsap.
+## https://youtu.be/ipW-DUyPYlk
+[![Dynamic Character Controller With Three.js](https://user-images.githubusercontent.com/64514807/235347853-9411d7d7-1508-42a7-82aa-232650b13ee7.png)](https://youtu.be/ipW-DUyPYlk)
 
 ## Installation
 
 Clone this repo and npm install.
 
 ```bash
-npm i --force
+npm i
 ```
 
 ## Usage
