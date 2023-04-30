@@ -20,11 +20,6 @@ npm start
 
 You can view the development server at `localhost:8080`.
 
-### Compiling Rust
-```bash
-npm run compile
-```
-
 ### Production build
 
 ```bash
