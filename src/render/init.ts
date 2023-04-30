@@ -1,4 +1,3 @@
-import { VRMLoaderPlugin } from '@pixiv/three-vrm'
 import * as THREE from 'three'
 import Stats from 'three/examples/jsm/libs/stats.module.js'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
@@ -106,12 +105,6 @@ export const initEngine = async () => {
 
   gltfLoader = new GLTFLoader()
   textureLoader= new THREE.TextureLoader()
-
-  // Install GLTFLoader plugin
-  gltfLoader.register((parser) => {
-    // vrm loader setup
-    return new VRMLoaderPlugin(parser)
-  })
 
   renderTickManager.startLoop()
 }

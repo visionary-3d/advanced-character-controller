@@ -60,7 +60,6 @@
   "dependencies": {
     "@babel/runtime": "^7.20.7",
     "@dimforge/rapier3d": "^0.11.2",
-    "@pixiv/three-vrm": "^1.0.9",
     "caniuse-lite": "^1.0.30001441",
     "gsap": "^3.11.4",
     "three": "^0.148.0"
