@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 import { Object3D } from 'three'
-import { RAPIER, usePhysics, useScene } from '../init'
+import { RAPIER, usePhysics, useRenderSize, useScene } from '../init'
 import { useRenderer } from './../init'
 import { PhysicsObject, addPhysics } from '../physics/physics'
 import Rapier from '@dimforge/rapier3d'
@@ -637,8 +637,9 @@ class CharacterController extends THREE.Mesh {
   }
 
   updateRotation() {
-    const xh = this.inputManager.currentMouse.mouseXDelta / window.innerWidth
-    const yh = this.inputManager.currentMouse.mouseYDelta / window.innerHeight
+    const windowSize = useRenderSize()
+    const xh = this.inputManager.currentMouse.mouseXDelta / windowSize.width
+    const yh = this.inputManager.currentMouse.mouseYDelta / windowSize.height
 
     const PHI_SPEED = 2.5
     const THETA_SPEED = 2.5

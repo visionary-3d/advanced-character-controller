@@ -45,29 +45,7 @@ const startApp = async () => {
   scene.add(dirLight, ambientLight)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  // * APP
 
   const _addGroundMesh = () => {
     // * Settings
@@ -137,47 +115,6 @@ const startApp = async () => {
     )
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // postprocessing
-  const renderTargetParameters = {
-    minFilter: THREE.LinearFilter,
-    magFilter: THREE.LinearFilter,
-    stencilBuffer: false,
-  }
-
-  // save pass
-  const savePass = new SavePass(new THREE.WebGLRenderTarget(width, height, renderTargetParameters))
-
-  // blend pass
-  const blendPass = new ShaderPass(BlendShader, 'tDiffuse1')
-  blendPass.uniforms['tDiffuse2'].value = savePass.renderTarget.texture
-  blendPass.uniforms['mixRatio'].value = MOTION_BLUR_AMOUNT
-
-  // output pass
-  const outputPass = new ShaderPass(CopyShader)
-  outputPass.renderToScreen = true
-
-  // adding passes to composer
-  addPass(blendPass)
-  addPass(savePass)
-  addPass(outputPass)
-  // addPass(new UnrealBloomPass(new THREE.Vector2(width, height), 1, 0.5, 0.4))
-
-  useTick(({ timestamp, timeDiff, fps }: TickData) => {
-  })
 }
 
 export default startApp
